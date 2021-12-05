@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Learning</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet">
+</head>
+<body>
+<div class="testbox">
+    <form action="{{ url_for('predict')}}" method="post">
+        <div class="banner">
+            <h1>Flood prediction</h1>
+        </div>
+        <br/>
+        <fieldset>
+            <legend>Flood features</legend>
+            <div class="colums">
+                <div class="item">
+                    <label for="elevation">Elevation<span>*</span></label>
+                    <input id="elevation" name="elevation" step="any" type="number" required/>
+                </div>
+                <div class="item">
+                    <label for="precip01">Precip 01<span>*</span></label>
+                    <input id="precip01" name="precip01" step="any" type="number" required/>
+                </div>
+                <div class="item">
+                    <label for="precip02">Precip 02<span>*</span></label>
+                    <input id="precip02" name="precip02" step="any" type="number" required/>
+                </div>
+                <div class="item">
+                    <label for="precip03">Precip 03<span>*</span></label>
+                    <input id="precip03" name="precip03" step="any" type="number" required/>
+                </div>
+                <div class="item">
+                    <label for="precip04">Precip 04<span>*</span></label>
+                    <input id="precip04" name="precip04" step="any" type="number" required/>
+                </div>
+                <div class="item">
+                    <label for="precip05">Precip 05<span>*</span></label>
+                    <input id="precip05" name="precip05" step="any" type="number" required/>
+                </div>
+                <div class="item">
+                    <label for="precip06">Precip 06<span>*</span></label>
+                    <input id="precip06" name="precip06" step="any" type="number" required/>
+                </div>
+                <div class="item">
+                    <label for="precip07">Precip 07<span>*</span></label>
+                    <input id="precip07" name="precip07" step="any" type="number" required/>
+                </div>
+                <div class="item">
+                    <label for="LC_Type1_mode">LC_Type1_mode<span>*</span></label>
+                    <input id="LC_Type1_mode" name="LC_Type1_mode" step="any" type="number" required/>
+                </div>
+                <div class="btn-block">
+                    <button href="/" type="order">Predict</button>
+                </div>
+            </div>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>Model output</legend>
+            <div class="colums">
+            </div>
+            <div class="checkbox">
+                <p>The predicted flood percentage is:</p>
+            </div>
+            <div>
+                <code>
+                    {{ code_text }}
+                </code>
+            </div>
+            <div class="pred">
+                <p>{{ prediction_text }}</p>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+
+<!--Source: https://www.w3docs.com/tools/editor/6256-->
