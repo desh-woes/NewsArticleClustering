@@ -11,70 +11,110 @@
 <div class="testbox">
     <form action="{{ url_for('predict')}}" method="post">
         <div class="banner">
-            <h1>Flood prediction</h1>
+            <h1>News Clustering</h1>
         </div>
         <br/>
+
         <fieldset>
-            <legend>Flood features</legend>
+            <legend id="all_links">All Links</legend>
             <div class="colums">
                 <div class="item">
-                    <label for="elevation">Elevation<span>*</span></label>
-                    <input id="elevation" name="elevation" step="any" type="number" required/>
+                    <a href="https://edition.cnn.com/2022/01/21/health/omicron-facts-fallacies-frieden-commentary/index.html">Don't
+                        underestimate Omicron -- especially if you're unvaccinated</a>
                 </div>
                 <div class="item">
-                    <label for="precip01">Precip 01<span>*</span></label>
-                    <input id="precip01" name="precip01" step="any" type="number" required/>
+                    <a href="https://www.newtimes.co.rw/news/rbc-warns-new-covid-19-variant">RBC warns of new Covid-19
+                        variant</a>
                 </div>
                 <div class="item">
-                    <label for="precip02">Precip 02<span>*</span></label>
-                    <input id="precip02" name="precip02" step="any" type="number" required/>
+                    <a href="https://www.bbc.com/news/world-europe-59283128">Covid: Austria introduces lockdown for
+                        unvaccinated</a>
                 </div>
                 <div class="item">
-                    <label for="precip03">Precip 03<span>*</span></label>
-                    <input id="precip03" name="precip03" step="any" type="number" required/>
+                    <a href="https://www.newtimes.co.rw/sports/table-tennis-coaches-urged-invest-more-efforts-nurturing-new-players">Table
+                        Tennis: Coaches urged to invest more efforts in nurturing new players</a>
                 </div>
                 <div class="item">
-                    <label for="precip04">Precip 04<span>*</span></label>
-                    <input id="precip04" name="precip04" step="any" type="number" required/>
+                    <a href="https://edition.cnn.com/2022/02/02/sport/giannis-antetokounmpo-triple-double-michael-jordan-total-spt-intl/index.html">Giannis
+                        Antetokounmpo surpasses Michael Jordan's triple-double total as Milwaukee Bucks win</a>
                 </div>
                 <div class="item">
-                    <label for="precip05">Precip 05<span>*</span></label>
-                    <input id="precip05" name="precip05" step="any" type="number" required/>
+                    <a href="https://edition.cnn.com/2022/02/01/sport/career-highlights-tom-brady-spt-intl/index.html">Tom
+                        Brady leaves the NFL as the architect of one of the greatest sports dynasties ever</a>
                 </div>
                 <div class="item">
-                    <label for="precip06">Precip 06<span>*</span></label>
-                    <input id="precip06" name="precip06" step="any" type="number" required/>
+                    <a href="https://edition.cnn.com/2022/01/24/investing/global-markets-intl-hnk/index.html">Global
+                        stocks mixed as investors worry about Russia-Ukraine tensions and upcoming Fed plans</a>
                 </div>
                 <div class="item">
-                    <label for="precip07">Precip 07<span>*</span></label>
-                    <input id="precip07" name="precip07" step="any" type="number" required/>
+                    <a href="https://edition.cnn.com/2022/01/24/investing/joe-biden-stock-market/index.html">Unlike
+                        Trump, Biden doesn't use stocks to judge the economy, White House says</a>
                 </div>
                 <div class="item">
-                    <label for="LC_Type1_mode">LC_Type1_mode<span>*</span></label>
-                    <input id="LC_Type1_mode" name="LC_Type1_mode" step="any" type="number" required/>
+                    <a href="https://www.newtimes.co.rw/business/uk-based-fin-tech-poised-rwandan-market-debut">Is UK
+                        based fin-tech poised for Rwandan market debut?</a>
                 </div>
-                <div class="btn-block">
-                    <button href="/" type="order">Predict</button>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cluster 1</legend>
+            <div class="colums">
+                <div class="item">
+                    <a href="https://edition.cnn.com/2022/01/21/health/omicron-facts-fallacies-frieden-commentary/index.html">Don't
+                        underestimate Omicron -- especially if you're unvaccinated</a>
+                </div>
+                <div class="item">
+                    <a href="https://edition.cnn.com/2022/01/24/investing/global-markets-intl-hnk/index.html">Global
+                        stocks mixed as investors worry about Russia-Ukraine tensions and upcoming Fed plans</a>
+                </div>
+                <div class="item">
+                    <a href="https://edition.cnn.com/2022/01/24/investing/joe-biden-stock-market/index.html">Unlike
+                        Trump, Biden doesn't use stocks to judge the economy, White House says</a>
+                </div>
+                <div class="item">
+                    <a href="https://www.newtimes.co.rw/business/uk-based-fin-tech-poised-rwandan-market-debut">Is UK
+                        based fin-tech poised for Rwandan market debut?</a>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Cluster 2</legend>
+            <div class="colums">
+                <div class="item">
+                    <a href="https://www.bbc.com/news/world-europe-59283128">Covid: Austria introduces lockdown for
+                        unvaccinated</a>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Cluster 3</legend>
+            <div class="colums">
+                <div class="item">
+                    <a href="https://www.newtimes.co.rw/news/rbc-warns-new-covid-19-variant">RBC warns of new Covid-19
+                        variant</a>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Cluster 4</legend>
+            <div class="colums">
+                <div class="item">
+                    <a href="https://www.newtimes.co.rw/sports/table-tennis-coaches-urged-invest-more-efforts-nurturing-new-players">Table
+                        Tennis: Coaches urged to invest more efforts in nurturing new players</a>
+                </div>
+                <div class="item">
+                    <a href="https://edition.cnn.com/2022/02/02/sport/giannis-antetokounmpo-triple-double-michael-jordan-total-spt-intl/index.html">Giannis
+                        Antetokounmpo surpasses Michael Jordan's triple-double total as Milwaukee Bucks win</a>
+                </div>
+                <div class="item">
+                    <a href="https://edition.cnn.com/2022/02/01/sport/career-highlights-tom-brady-spt-intl/index.html">Tom
+                        Brady leaves the NFL as the architect of one of the greatest sports dynasties ever</a>
                 </div>
             </div>
         </fieldset>
         <br/>
-        <fieldset>
-            <legend>Model output</legend>
-            <div class="colums">
-            </div>
-            <div class="checkbox">
-                <p>The predicted flood percentage is:</p>
-            </div>
-            <div>
-                <code>
-                    {{ code_text }}
-                </code>
-            </div>
-            <div class="pred">
-                <p>{{ prediction_text }}</p>
-            </div>
-        </fieldset>
+
     </form>
 </div>
 </body>

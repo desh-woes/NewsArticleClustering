@@ -2,6 +2,10 @@ html, body {
     min-height: 100%;
 }
 
+fieldset {
+    margin-top: 20px;
+}
+
 body, div, form, input, select, textarea, label {
     padding: 0;
     margin: 0;
@@ -28,6 +32,10 @@ legend {
     font-size: 18px;
     color: #fff;
     background-color: #1c87c9;
+}
+
+#all_links {
+    background-color: #c91c67;
 }
 
 textarea {
