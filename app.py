@@ -1,9 +1,7 @@
-import joblib
 from flask import Flask, render_template
 
 # Create flask app
 flask_app = Flask(__name__)
-model = joblib.load("./random_forest.joblib")
 
 
 @flask_app.route("/")
